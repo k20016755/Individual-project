@@ -8,22 +8,19 @@ def evenorodd(num):
         raise TypeError("Please enter any number not a string")
         #num = int (input (""))
     if (num%2)==0:
-        print ("Number is even")
+        outstr="Even"
     else:
-        print("Number is odd")
-def is_num(num):
-    try:
-        int(num)
-        return True
-    except ValueError:
-        return False
+        outstr="Odd"
+    return outstr
+
 
 def test_ifnum():
     with pytest.raises(TypeError):
         evenorodd("9")
-    #n = random.randint(0,10)
-    #outcome = is_num(n)
-    #assert outcome == False
+def test_if_even_ok():
+    assert evenorodd(80) == "Even"
+def test_if_odd_ok():
+    assert evenorodd(101) == "Odd"
 #def multiply(a,b):
   #  return a*b
 #@pytest.mark.skipif(sys.version_info < (3, 10), reason="requires python3.10 or higher")

@@ -51,4 +51,5 @@ class testevenodd(unittest.TestCase):
         evenorodd.check(n)
 
 
-        
+if __name__ == '__main__' :
+  unittest.main()       

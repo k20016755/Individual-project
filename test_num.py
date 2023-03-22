@@ -1,6 +1,9 @@
 import random
 import sys
 import pytest
+import coverage
+cov = coverage.Coverage()
+cov.start
 
 
 def evenorodd(num):
@@ -27,7 +30,8 @@ def test_if_odd_ok():
     assert evenorodd(101) == "Odd"
 
 #@pytest.mark.skipif(sys.version_info < (3, 10), reason="requires python3.10 or higher")
-
+cov.stop()
+cov.save()
 
 #@pytest.mark.xfail
 #def test_assert(raises=AssertionError):

@@ -21,4 +21,4 @@ jobs:
         python -m pip install --upgrade pip
         pip install mutmut
     - name: Run mutation tests
-      run: mutmut run --paths-to-mutate=test_num.py --tests-dir=test_num.py --report-html=mutmut-report.html
+      run: mutmut run --paths-to-mutate=test_num.py --tests-dir=test_num.py 

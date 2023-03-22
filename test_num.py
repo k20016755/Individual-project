@@ -3,7 +3,7 @@ import sys
 import pytest
 import coverage
 cov = coverage.Coverage()
-cov.start
+cov.start()
 
 
 def evenorodd(num):

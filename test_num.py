@@ -21,6 +21,8 @@ def test_if_even_ok():
     assert evenorodd(80) == "Even"
 def test_if_0_even_ok():
     assert evenorodd(0) == "Even"
+def test_if_negative_ok():
+    assert evenorodd(-2)== "Even"
 def test_if_odd_ok():
     assert evenorodd(101) == "Odd"
 #def multiply(a,b):

@@ -1,27 +1,24 @@
-name: CI
+name: Python Mutation Test
+
 on:
   push:
-    branches: [master]
-    paths-ignore:
-      - 'README.md'
-      - 'docs/**'
+    branches: [ main ]
   pull_request:
-    branches: [master]
-    paths-ignore:
-      - 'README.md'
-      - 'docs/**'
+    branches: [ main ]
+
 jobs:
-  build:
+  mutation-testing:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 12.x
-      - run: npm ci
-      - run: npm run test
-      - run: npm run mutate
-      - run: npm run coverage
-      - uses: coverallsapp/github-action@v1.2.4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install mutmut
+    - name: Run mutation tests
+      run: mutmut run

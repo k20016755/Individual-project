@@ -25,11 +25,9 @@ def test_if_negative_ok():
     assert evenorodd(-2)== "Even"
 def test_if_odd_ok():
     assert evenorodd(101) == "Odd"
-#def multiply(a,b):
-  #  return a*b
+
 #@pytest.mark.skipif(sys.version_info < (3, 10), reason="requires python3.10 or higher")
-#def test_multiply():
- #   assert multiply(2,3)==6
+
 
 #@pytest.mark.xfail
 #def test_assert(raises=AssertionError):

@@ -9,7 +9,8 @@ on:
 jobs:
   benchmark:
     runs-on: ubuntu-latest
-
+    env:
+      DJANGO_SETTINGS_MODULE: indvprdjango.settings
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
@@ -23,6 +24,8 @@ jobs:
         pip install pytest-benchmark
         pip install django
         pip install pytest pytest-django
+        export PYTHONPATH=$(pwd):indvprdjango
+        python indvprdjango/manage.py test
    
     - name: Run benchmark tests
       run: pytest --benchmark-autosave --benchmark-sort=mean

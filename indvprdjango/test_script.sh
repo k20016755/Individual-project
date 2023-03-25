@@ -1,4 +1,4 @@
 #!/bin/bash
 
-export DJANGO_SETTINGS_MODULE=myproject.settings
+export DJANGO_SETTINGS_MODULE=indvprdjango.settings
 pytest

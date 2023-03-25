@@ -24,7 +24,7 @@ jobs:
         pip install pytest pytest-django
         pip install django
         pip install coverage
-        python manage.py test
+        python indvprdjango/manage.py test
     - name: Run tests
       run: |
         coverage run -m pytest

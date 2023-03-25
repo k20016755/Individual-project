@@ -5,4 +5,4 @@ class MydjangoappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'mydjangoapp'
     def ready(self):
-        from models import Task
+        from mydjangoapp.models import Task

@@ -2,8 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-export DJANGO_SETTINGS_MODULE=indvprdjango.settings.py
-pytest
+
 
 def main():
     """Run administrative tasks."""

@@ -5,12 +5,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-env:
-      DJANGO_SETTINGS_MODULE: indvprdjango.settings
+
 jobs:
   benchmark:
     runs-on: ubuntu-latest
-
+    env:
+      DJANGO_SETTINGS_MODULE: indvprdjango.settings
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
@@ -24,7 +24,7 @@ jobs:
         pip install pytest-benchmark
         pip install django
         pip install pytest pytest-django
-        export PYTHONPATH=$(pwd):indvprdjango/manage.py
+        export PYTHONPATH=$(pwd):indvprdjango
    
     - name: Run benchmark tests
       run: pytest --benchmark-autosave --benchmark-sort=mean

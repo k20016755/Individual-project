@@ -25,5 +25,6 @@ jobs:
         pip install flake8 pytest
         pip install pytest pytest-django
         pip install django
+        python manage.py test
     - name: Run mutation tests
       run: mutmut run --paths-to-mutate=test_num.py --tests-dir=test_num.py 

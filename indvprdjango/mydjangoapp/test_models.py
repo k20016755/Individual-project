@@ -1,8 +1,10 @@
 import pytest
 from mydjangoapp.models import Task
 import django
-django.setup()
 from django.conf import settings
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE","indvprdjango.settings")
+django.setup()
 
 @pytest.mark.django_db
 def test_create_task():

@@ -5,7 +5,8 @@ from mydjangoapp.models import Task
 import django
 django.setup()
 from django.conf import settings
-
+import os
+os.environ.setdefault("DJANGO_SETTINGS_MODULE","indvprdjango.settings")
 @pytest.mark.django_db
 def test_task_list(client):
     task1 = Task.objects.create(title='Task 1', completed=False)

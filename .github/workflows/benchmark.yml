@@ -24,6 +24,7 @@ jobs:
         pip install pytest-benchmark
         pip install django
         pip install pytest pytest-django
+        export PYTHONPATH=$(pwd):indvprdjango/manage.py
    
     - name: Run benchmark tests
       run: pytest --benchmark-autosave --benchmark-sort=mean

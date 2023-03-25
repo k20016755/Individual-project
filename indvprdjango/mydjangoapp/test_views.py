@@ -1,6 +1,10 @@
+import django
 import pytest
 from django.urls import reverse
 from mydjangoapp.models import Task
+import django
+django.setup()
+from django.conf import settings
 
 @pytest.mark.django_db
 def test_task_list(client):

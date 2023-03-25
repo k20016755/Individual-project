@@ -27,4 +27,5 @@ jobs:
         
    
     - name: Run benchmark tests
+
       run: pytest --benchmark-autosave --benchmark-sort=mean

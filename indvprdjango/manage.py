@@ -2,11 +2,13 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+export DJANGO_SETTINGS_MODULE=indvprdjango.settings.py
+pytest
 
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'indvprdjango.settings')
+    
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

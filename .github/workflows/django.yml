@@ -30,4 +30,4 @@ jobs:
         export PYTHONPATH=$(pwd):indvprdjango
     - name: Run Tests
       run: |
-        python indvprdjango/manage.py test
+        python indvprdjango/manage.py test mydjangoapp

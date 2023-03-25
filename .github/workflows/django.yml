@@ -27,7 +27,7 @@ jobs:
         pip install pytest pytest-django
         pip install django
 
-        export PYTHONPATH=$(pwd):mypythonproject
+        export PYTHONPATH=$(pwd):mydjangoproject
     - name: Run Tests
       run: |
-        python mypythonproject/manage.py test mydjangoapp
+        python mydjangoproject/manage.py test mydjangoapp

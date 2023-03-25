@@ -27,6 +27,5 @@ jobs:
         
    
     - name: Run benchmark tests
-      env:
-        DJANGO_SETTINGS_MODULE: indvprdjango.settings
+
       run: pytest --benchmark-autosave --benchmark-sort=mean

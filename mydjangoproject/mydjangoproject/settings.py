@@ -24,7 +24,7 @@ DJANGO_SETTINGS_MODULE=mydjangoproject.settings
 SECRET_KEY = 'django-insecure-$em5g7y0)*mktpugb7xuei-4hj(lorsr!_123eqad_b%ro!1_6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 #DJANGO_SETTINGS_MODULE=mydjangoproject.settings

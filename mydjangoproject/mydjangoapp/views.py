@@ -3,5 +3,5 @@ from .models import Task
 
 def task_list(request):
     tasks = Task.objects.all()
-    return render(request, 'task_list.html', {'tasks': tasks})
+    return render(request, 'mydjangoapp/templates/task_list.html', {'tasks': tasks})
 # Create your views here.

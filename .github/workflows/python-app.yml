@@ -30,7 +30,7 @@ jobs:
         pip install flake8 pytest
         pip install pytest pytest-django
         pip install django
-        pip install unittest
+        python -m pip install unittest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Set up virtual environment
       run:
@@ -42,6 +42,5 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Test with unittest
-      run: |
-        unittest
+    - name: Run unittest tests
+      run: python -m unittest discover -s ./tests/unittest -p "test_*.py"

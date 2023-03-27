@@ -45,7 +45,7 @@ class testevenodd(unittest.TestCase):
     def test_check(self):
         n = random.randint(0,10)
         evenorodd.check(n)
-        self.assertIsNotNone(n)
+        self.assertIsNone(n)
     def test_ifnum(self):
         n = random.randint(0,10)
         evenorodd.check(n)

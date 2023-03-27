@@ -10,7 +10,7 @@ jobs:
   mutation-testing:
     runs-on: ubuntu-latest
     env:
-        PYTHONPATH: $mydjangoproject
+        PYTHONPATH: $Individual-project/tree/main/mydjangoproject
         DJANGO_SETTINGS_MODULE: mydjangoproject.settings
         
     steps:

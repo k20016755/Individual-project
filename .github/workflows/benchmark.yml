@@ -10,7 +10,7 @@ jobs:
   benchmark:
     runs-on: ubuntu-latest
     env:
-        settings_module: mydjangoproject.settings
+      DJANGO_SETTINGS_MODULE: mydjangoproject.settings
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python

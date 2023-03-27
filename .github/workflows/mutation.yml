@@ -10,8 +10,9 @@ jobs:
   mutation-testing:
     runs-on: ubuntu-latest
     env:
+        PYTHONPATH: $mydjangoproject
         DJANGO_SETTINGS_MODULE: mydjangoproject.settings
-        PYTHONPATH: ${{mydjangoproject}}
+        
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python

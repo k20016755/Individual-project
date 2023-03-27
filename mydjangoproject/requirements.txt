@@ -1,0 +1,7 @@
+pytest
+pytest-django
+django
+pytest-benchmark
+pytest-cov
+coverage
+mutmut

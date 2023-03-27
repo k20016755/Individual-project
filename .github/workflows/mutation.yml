@@ -27,4 +27,4 @@ jobs:
         pip install django
 
     - name: Run mutation tests
-      run: mutmut run --paths-to-mutate=test_num.py --tests-dir=test_num.py 
+      run: mutmut run --paths-to-mutate=test_num.py,mydjangoproject/mydjangoapp/test_models.py,mydjangoproject/mydjangoapp/test_views.py --tests-dir=test_num.py,mydjangoproject/mydjangoapp 

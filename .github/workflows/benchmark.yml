@@ -9,9 +9,7 @@ on:
 jobs:
   benchmark:
     runs-on: ubuntu-latest
-    env:
-      DJANGO_SETTINGS_MODULE: mydjangoproject.settings
-      PYTHONPATH: ${{mydjangoproject}}
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python

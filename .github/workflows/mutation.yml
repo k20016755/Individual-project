@@ -28,4 +28,4 @@ jobs:
         pip install django
 
     - name: Run mutation tests
-      run: mutmut run --paths-to-mutate=test_num.py,evenorodd.py --tests-dir=test_num.py,evenorodd.py 
+      run: mutmut run --paths-to-mutate=test_num.py,find_min.py --tests-dir=test_num.py,find_min.py 

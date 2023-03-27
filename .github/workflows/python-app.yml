@@ -41,6 +41,5 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-    - name: Run unittest tests
-      run: python -m unittest discover -s ./tests/unittest -p "test_*.py"
+
  

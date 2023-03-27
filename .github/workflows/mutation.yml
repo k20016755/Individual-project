@@ -9,9 +9,7 @@ on:
 jobs:
   mutation-testing:
     runs-on: ubuntu-latest
-    env:
-        PYTHONPATH: $Individual-project/tree/main/mydjangoproject
-        DJANGO_SETTINGS_MODULE: mydjangoproject.settings
+    
         
     steps:
     - uses: actions/checkout@v2
@@ -30,4 +28,4 @@ jobs:
         pip install django
 
     - name: Run mutation tests
-      run: mutmut run --paths-to-mutate=test_num.py,mydjangoproject/mydjangoapp/test_models.py,mydjangoproject/mydjangoapp/test_views.py --tests-dir=test_num.py,mydjangoproject/mydjangoapp 
+      run: mutmut run --paths-to-mutate=test_num.py,evenorodd.py --tests-dir=test_num.py,evenorodd.py 

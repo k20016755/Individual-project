@@ -22,7 +22,7 @@ jobs:
 
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        python mydjangoproject/manage.py migrate
+        python manage.py migrate
         pip install pytest-cov
         pip install pytest
         pip install pytest pytest-django

@@ -25,7 +25,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install mutmut
         pip install -r requirements.txt
-        python mydjangoproject/manage.py migrate
+        python manage.py migrate
         python -m pip install --upgrade pip
         pip install flake8 pytest
         pip install pytest pytest-django

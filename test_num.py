@@ -1,6 +1,7 @@
 import random
 import sys
 import pytest
+import unittest
 
 
 def evenorodd(num):
@@ -25,6 +26,14 @@ def test_if_negative_ok():
     assert evenorodd(-2)== "Even"
 def test_if_odd_ok():
     assert evenorodd(101) == "Odd"
+class TestBenchmarks(unittest.TestCase):
+
+    def test_simple_benchmark(self):
+        @pytest.mark.benchmark
+        def test():
+            result = sum(range(10000))
+            assert result == 49995000
+        test()
 
 #@pytest.mark.skipif(sys.version_info < (3, 10), reason="requires python3.10 or higher")
 

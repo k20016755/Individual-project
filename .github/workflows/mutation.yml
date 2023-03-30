@@ -1,5 +1,7 @@
 name: Python Mutation Test
-
+env:
+    PYTHONPATH: $PYTHONPATH:mydjangoproject
+    DJANGO_SETTINGS_MODULE: mydjangoproject.settings
 on:
   push:
     branches: [ main ]
@@ -22,10 +24,12 @@ jobs:
 
         python -m pip install --upgrade pip
         pip install mutmut
+        pip install -r requirements.txt
+        python mydjangoproject/manage.py migrate
         python -m pip install --upgrade pip
         pip install flake8 pytest
         pip install pytest pytest-django
         pip install django
 
     - name: Run mutation tests
-      run: mutmut run --paths-to-mutate=test_num.py,evenorodd.py --tests-dir=test_num.py,evenorodd.py 
+      run: mutmut run --paths-to-mutate=test_num.py,evenorodd.py,mydjangoapp/tests/ --tests-dir=test_num.py,evenorodd.py,mydjangoapp/tests/ 

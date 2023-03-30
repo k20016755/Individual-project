@@ -1,0 +1,6 @@
+pytest-django
+pytest
+django
+mutmut
+pytest--benchmark
+pytest-cov

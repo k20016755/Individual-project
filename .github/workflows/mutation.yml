@@ -33,7 +33,7 @@ jobs:
 
     - name: Run mutation tests
 
-      run: mutmut run --paths-to-mutate=test_num.py,find_num.py,mydjangoapp/tests/ --tests-dir=test_num.py,find_num.py,mydjangoapp/tests/ 
+      run: mutmut run --paths-to-mutate=${{ github.workspace } --tests-dir=${{ github.workspace } 
 
       
 

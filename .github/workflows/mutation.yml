@@ -30,7 +30,7 @@ jobs:
         pip install flake8 pytest
         pip install pytest pytest-django
         pip install django
-        pip install pytest pytest-junitxml
+        pip install pytest-junitxml==3.14.0
         pip install pony==0.7.14
     - name: Run mutation tests
 

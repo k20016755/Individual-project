@@ -33,10 +33,10 @@ jobs:
         pip install pony==0.7.14
     - name: Run mutation tests
 
-      run: mutmut run --paths-to-mutate=${{ github.workspace }}/ --tests-dir=${{ github.workspace }}/ 
+      run: mutmut run --paths-to-mutate=evenorodd.py,find_num.py,test_num.py,mydjangoapp/tests --tests-dir= evenorodd.py,find_num.py,test_num.py,mydjangoapp/tests
     - name: Generate test report
       if: always()
-      run: mutmut junitxml > test-results.xml
+      run: pytest junitxml > test-results.xml
     - name: Publish test report
       if: always()
       uses: actions/upload-artifact@v2

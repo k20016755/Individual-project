@@ -1,16 +1,10 @@
+import random
+import pytest
+
+@pytest.fixture
+def lst():
+    return [random.randint(1,100) for _ in range(random.randint(1,10))]
 def test_min(lst):
-    """
-    Find and return the minimum value in a list of integers.
-
-    Parameters:
-    lst (list): A list of integers.
-
-    Returns:
-    int: The minimum value in the list.
-
-    Raises:
-    ValueError: If the list is empty.
-    """
     if not lst:
         raise ValueError("List is empty")
     
@@ -21,8 +15,7 @@ def test_min(lst):
     
     return min_val
 
-def test_find_min():
-    # Test an empty list
+def test_lst():
     try:
         test_min([])
     except ValueError as e:
@@ -30,8 +23,8 @@ def test_find_min():
     else:
         assert False, "Expected ValueError for empty list was not raised"
 
-    # Test a list with one item
+   
     assert test_min([5]) == 5
 
-    # Test a list with multiple items
+    
     assert test_min([3, 5, 2, 8, 1]) == 1

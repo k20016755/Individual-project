@@ -29,6 +29,9 @@ jobs:
         pip install pytest pytest-django    
    
     - name: Run benchmark tests
-      run: pytest --benchmark-autosave --benchmark-sort=mean --benchmark-autosave-file=previous_benchmark_results.json
-    - name: Benchmark Report and Comparison
-      run: pytest --benchmark-autosave --benchmark-sort=mean --benchmark-compare --benchmark-compare-file=previous_benchmark_results.json --benchmark-report --benchmark-columns=min,max,mean,stddev --benchmark-histogram
+      run: pytest  pytest --benchmark-autosave --benchmark-sort=mean --benchmark-compare --benchmark-compare-file=previous_benchmark_results.json --benchmark-report --benchmark-columns=min,max,mean,stddev --benchmark-histogram
+    - name: Upload benchmark results
+      uses: actions/upload-artifact@v2
+      with:
+        name: benchmark_results
+        path: previous_benchmark_results.json

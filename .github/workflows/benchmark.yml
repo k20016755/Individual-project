@@ -28,7 +28,8 @@ jobs:
         pip install django
         pip install pytest pytest-django    
 
-   
+    - name: Create benchmark results file
+      run: touch benchmark_results.json
     - name: Run benchmark tests
-      run: pytest --benchmark-autosave --benchmark-sort=mean --benchmark-compare --benchmark-columns=min,max,mean,stddev --benchmark-histogram
+      run: pytest --benchmark-autosave --benchmark-sort=mean --benchmark-compare --benchmark-compare-file=previous_benchmark_results.json --benchmark-report --benchmark-columns=min,max,mean,stddev --benchmark-histogram --benchmark-json=benchmark_results.json
 

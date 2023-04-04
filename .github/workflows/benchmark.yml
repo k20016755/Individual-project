@@ -32,6 +32,7 @@ jobs:
     - name: Run benchmark tests
       run:
         pytest --benchmark-autosave --benchmark-sort=mean --benchmark-compare --benchmark-columns=min,max,mean,stddev --benchmark-histogram --benchmark-json=benchmark_results.json
+        pytest-benchmark --compare-with=previous_benchmark_results.json --json=benchmark_results.json --hist=benchmark_histogram.png --csv=benchmark_data.csv --min-rounds=5 --min-time=1
       env:
         PYTEST_BENCHMARK_COMPARE_FILE: previous_benchmark_results.json
       

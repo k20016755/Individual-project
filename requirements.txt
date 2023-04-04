@@ -4,3 +4,4 @@ django
 mutmut
 pytest--benchmark
 pytest-cov
+pytest-benchmark

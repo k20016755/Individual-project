@@ -18,6 +18,7 @@ def evenorodd(num):
 def test_ifnum():
     with pytest.raises(TypeError):
         evenorodd("9")
+@pytest.mark.benchmark
 def test_if_even_ok():
     assert evenorodd(80) == "Even"
 def test_if_0_even_ok():

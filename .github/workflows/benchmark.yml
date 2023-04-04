@@ -41,5 +41,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: benchmark_histogram
-        path: .benchmark/histogram.svg      
+        path: .benchmark/histograms/     
 

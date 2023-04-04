@@ -30,5 +30,5 @@ jobs:
 
    
     - name: Run benchmark tests
-      run: pytest  pytest --benchmark-autosave --benchmark-sort=mean --benchmark-compare --benchmark-columns=min,max,mean,stddev --benchmark-histogram
+      run: pytest --benchmark-autosave --benchmark-sort=mean --benchmark-compare --benchmark-columns=min,max,mean,stddev --benchmark-histogram
 

@@ -27,7 +27,7 @@ jobs:
         pip install --upgrade pytest-benchmark
         pip install django
         pip install pytest pytest-django    
-
+        pip install pytest-benchmark[histogram]
 
     - name: Run benchmark tests
       run:

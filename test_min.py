@@ -14,7 +14,7 @@ def test_min(lst):
             min_val = num
     
     return min_val
-
+@pytest.mark.benchmark
 def test_lst():
     try:
         test_min([])

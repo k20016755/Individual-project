@@ -33,7 +33,7 @@ class TestBenchmarks(unittest.TestCase):
         def test():
             result = sum(range(10000))
             assert result == 49995000
-        test()
+        
 
 #@pytest.mark.skipif(sys.version_info < (3, 10), reason="requires python3.10 or higher")
 

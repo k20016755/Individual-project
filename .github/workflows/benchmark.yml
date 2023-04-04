@@ -34,7 +34,7 @@ jobs:
         pytest --benchmark-autosave --benchmark-sort=mean --benchmark-compare --benchmark-columns=min,max,mean,stddev --benchmark-histogram=.benchmark/histogram.svg --benchmark-json=.benchmark/benchmark_results.json
     - name: Generate Report
       run: |  
-        pytest-benchmark compare --compare-with=.benchmark/previous_benchmark_results.json --json=.benchmark/benchmark_results.json
+        pytest-benchmark compare .benchmark/previous_benchmark_results.json .benchmark/benchmark_results.json
         pytest-benchmark histo .benchmark/benchmark_results.json --histogram-file=.benchmark/histogram.svg
       env:
         PYTEST_BENCHMARK_COMPARE_FILE: .benchmark/previous_benchmark_results.json

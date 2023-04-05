@@ -1,7 +1,7 @@
 import random
 import pytest
 
-@pytest.fixture
+
 def lst():
     return [random.randint(1,100) for _ in range(random.randint(1,10))]
 def test_min(lst):
@@ -14,7 +14,7 @@ def test_min(lst):
             min_val = num
     
     return min_val
-@pytest.mark.benchmark
+
 def test_lst():
     try:
         test_min([])

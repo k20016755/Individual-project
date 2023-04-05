@@ -2,8 +2,7 @@ import random
 import pytest
 
 
-def lst():
-    return [random.randint(1,100) for _ in range(random.randint(1,10))]
+
 def test_min(lst):
     if not lst:
         raise ValueError("List is empty")

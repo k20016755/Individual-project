@@ -1,9 +1,10 @@
 import random
 import pytest
 
+def lst():
+    return [(random.randint(1,100) for _ in range(random.randint(1,10))]
 
-
-def test_min(lst):
+def specify_min(lst):
     if not lst:
         raise ValueError("List is empty")
     
@@ -16,14 +17,14 @@ def test_min(lst):
 
 def test_lst():
     try:
-        test_min([])
+        specify_min([])
     except ValueError as e:
         assert str(e) == "List is empty"
     else:
         assert False, "Expected ValueError for empty list was not raised"
 
    
-    assert test_min([5]) == 5
+    assert specify_min([5]) == 5
 
     
-    assert test_min([3, 5, 2, 8, 1]) == 1
+    assert specify_min([3, 5, 2, 8, 1]) == 1

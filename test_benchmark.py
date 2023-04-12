@@ -1,7 +1,7 @@
 import pytest
 import pytest_benchmark
 #evaluating the benchmark workflow with this file. 
-@pytest.fixture(scope="evaluating tests")
+@pytest.fixture(scope="session")
 def values():
     return [i**2 for i in range(10000)]
 

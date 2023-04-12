@@ -34,10 +34,10 @@ jobs:
     - name: Run mutation tests
 
       run: mutmut run --paths-to-mutate=test_min.py --tests-dir=mydjangoapp/tests/
-    - name: Generate test report
+    - name: Generate Mutation test report
       if: always()
       run: mutmut junitxml > test-results.xml
-    - name: Publish test report
+    - name: Upload test report Artifact
       if: always()
       uses: actions/upload-artifact@v2
       with:

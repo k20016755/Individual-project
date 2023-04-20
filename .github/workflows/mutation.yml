@@ -33,7 +33,7 @@ jobs:
         pip install pony==0.7.14
     - name: Run mutation tests
 
-      run: mutmut run --paths-to-mutate=mydjangoapp/tests/,evenorodd.py,test_min.py --tests-dir=mydjangoapp/tests/
+      run: mutmut run --paths-to-mutate=mydjangoapp/tests/,test_min.py --tests-dir=mydjangoapp/tests/
     - name: Generate Mutation test report
       if: always()
       run: mutmut junitxml > test-results.xml

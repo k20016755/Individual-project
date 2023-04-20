@@ -1,5 +1,5 @@
 # Individual-project
-Evaluating tests in a python application
+Evaluating tests in a python/Django application
 Fork the repository https://github.com/k20016755/Individual-project.git to make changes to the codebase. Instructions are given in the project report on how to fork the repository in Chapter 5.4. Otherwise, download the ZIP file of this project and extract it to your machine to test manually.  You can also git clone the repository https://github.com/k20016755/Individual-project.git in your preferred code editor. Once the Individual-Project is opened in your preferred code editor you can carry on to the next steps.
 Make sure Python and pip is installed on your system. You can check his by running the following commands in the terminal of your preferred code editor or virtual machine terminal:
 $ python --version

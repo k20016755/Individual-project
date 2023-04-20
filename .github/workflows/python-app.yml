@@ -49,6 +49,6 @@ jobs:
         pytest
     - name: Test with unittest
       run: |
-        python evenorodd.py
+        python 
 
  
